@@ -1,0 +1,80 @@
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.upright {
+    pointer-events: none;
+}
+
+.reversed {
+    pointer-events: none;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+img {
+    object-fit: cover;
+    width: 250px;
+    height: auto;
+    border-radius: 5px;
+}
+
+img:hover {
+    opacity: 0.9;
+}
+
+.top {
+    height: 20px;
+    background-color: rgb(76, 110, 76);
+    margin: 0
+}
+
+td {
+    width: 250px;
+}
+
+div {
+    margin: 20px;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+button {
+    background-color: #cc5e15;
+    border-radius: 5px;
+    border: none;
+    width: 100px;
+    height: 35px;
+    color: rgb(248, 246, 242);
+}
+
+button:hover {
+    background-color: #b15213;
+    color: rgb(233, 231, 229);
+}
+
+th {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+td {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+}
+
+.name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+}

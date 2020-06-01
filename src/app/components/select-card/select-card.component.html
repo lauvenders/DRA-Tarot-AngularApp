@@ -1,0 +1,61 @@
+<app-home></app-home>
+
+<div id="buttons" (click)="scroll()">
+    <!-- Select deck -->
+    <h3>Select deck</h3>
+    <mat-button-toggle-group #group1="matButtonToggleGroup" name="deck" (click)="selectDeck(group1.value)" [disabled]="deckDisabled">
+
+        <mat-button-toggle value="majorarcana">Major Arcana</mat-button-toggle>
+        <mat-button-toggle value="wands">Suit of Wands</mat-button-toggle>
+        <mat-button-toggle value="cups">Suit of Cups</mat-button-toggle>
+        <mat-button-toggle value="swords">Suit of Swords</mat-button-toggle>
+        <mat-button-toggle value="pentacles">Suit of Pentacles</mat-button-toggle>
+        <mat-button-toggle value="full-deck">Full Deck</mat-button-toggle>
+
+    </mat-button-toggle-group>
+    <br><br>
+
+    <!-- Select reading -->
+    <h3>Select reading</h3>
+    <mat-button-toggle-group id="reading" [class]="enableNext" #group2="matButtonToggleGroup" name="reading" (click)="selectReading(group2.value)" [disabled]="readingDisabled">
+
+        <mat-button-toggle value="love">Love
+            <mat-icon>favorite</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="career">Career
+            <mat-icon>work</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="finances">Finances
+            <mat-icon>attach_money</mat-icon>
+        </mat-button-toggle>
+
+    </mat-button-toggle-group>
+
+</div>
+
+<!-- View cards to select -->
+<div id="cards" [hidden]="hiddenCards">
+    <div id=" cards">
+        <!-- <h2>Select cards</h2> -->
+        <table wt-responsive-table>
+            <tr>
+                <!-- List of cards -->
+                <td *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]">
+                    <img [class.image]="selectedCards[i] == './assets/back-tarot-card.jpg'" [src]="selectedCards[i]" alt="back-tarot-card" class="responsive" (click)="(selectCard(i))">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Selected cards -->
+    <div id="selected-cards" class="center">
+        <table>
+            <tr>
+                <td><img [src]="display[0]" alt="back-tarot-card"></td>
+                <td><img [src]="display[1]" alt="back-tarot-card"></td>
+                <td><img [src]="display[2]" alt="back-tarot-card"></td>
+            </tr>
+        </table>
+    </div>
+
+</div>

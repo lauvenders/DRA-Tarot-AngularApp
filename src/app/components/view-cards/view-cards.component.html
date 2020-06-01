@@ -1,0 +1,62 @@
+<app-home></app-home>
+
+<!-- Banner to navigate to different decks -->
+<div class="banner">
+    <mat-toolbar class="nav">
+        <mat-toolbar-row>
+            <a mat-button *ngFor="let deck of decks" class="link" (click)="scroll(deck)">{{deck.name}}</a>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div #top></div>
+
+    <!-- Print decks -->
+    <div *ngFor="let deck of decks, let j = index" [attr.id]=deck.name>
+        <h1>{{deck.name}}</h1>
+        <mat-grid-list cols="3" rowHeight="380px">
+            <!-- Print cards -->
+            <mat-grid-tile *ngFor="let card of deck.cards, let i = index">
+                <table>
+                    <tr>
+                        <td rowspan=" 3 ">
+                            <div class="container">
+                                <h2>{{card.name}}</h2>
+                                <!-- Card image and overlay to rotate -->
+                                <img [class]="card.class" [src]="card.img" [alt]="card.name">
+                                <div class="overlay">
+                                    <a class="icon">
+                                        <i class="fa fa-repeat" (click)="rotateCard(deck, card, i, j)"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                        <!-- Card meanings -->
+                        <td>
+                            <mat-icon>favorite</mat-icon><br>
+                            <a id="{{'love' + i + j}}">{{initMeanings(card, 'love')}}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <mat-icon>work</mat-icon><br>
+                            <a id="{{'career' + i + j}}">{{initMeanings(card, 'career')}}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <mat-icon>attach_money</mat-icon><br>
+                            <a id="{{'finances' + i + j}}">{{initMeanings(card, 'finances')}}</a>
+                        </td>
+                    </tr>
+                </table>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</div>
+
+<!-- Scroll to top button -->
+<div class="top">
+    <button mat-fab color="">
+    <mat-icon (click)="top.scrollIntoView({block: 'end', behavior: 'smooth'})">arrow_upward</mat-icon>
+</button>
+</div>

@@ -1,0 +1,107 @@
+.overlay {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    /* background-color: rgb(132, 0, 255); */
+}
+
+.container:hover .overlay {
+    opacity: 0.8;
+}
+
+.container {
+    position: relative;
+}
+
+.link {
+    margin: auto;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 15px;
+    color: rgb(248, 246, 242)
+}
+
+.banner {
+    /* position: sticky; */
+    /* top: 0; */
+    margin: 0;
+}
+
+.nav {
+    position: sticky;
+    top: -0.1px;
+    text-align: center;
+    background-color: rgb(76, 110, 76);
+    padding: 0;
+    z-index: 99999;
+}
+
+.icon {
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+img {
+    width: 180px;
+}
+
+div {
+    margin: 20px;
+}
+
+a {
+    font-family: 'Playfair Display', serif;
+}
+
+table {
+    margin: 5px;
+    max-height: 300px;
+    height: 300px;
+}
+
+mat-grid-tile {
+    background-color: rgb(235, 228, 222);
+    border: 1px solid rgb(219, 212, 206);
+}
+
+
+/* .upright {} */
+
+.reversed {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.top {
+    position: sticky;
+    bottom: 10px;
+    text-align: right;
+}
+
+h1 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 35px;
+}
+
+h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    margin-bottom: -2px;
+}

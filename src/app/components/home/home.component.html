@@ -1,0 +1,21 @@
+<div>
+    <!-- Top line -->
+    <mat-toolbar class="top"></mat-toolbar>
+
+    <!-- Image, title and description -->
+    <img src="./assets/nasa.jpg">
+    <div class="title">
+        <img src="./assets/yoga.png" class="icon">
+        <h1>TAROT APP</h1>
+        <p>Get into the magic world of tarot getting a free <br> past-present-future reading or learning the cards' meanings <br> with our full tarot cards meaning list organized by suit.</p>
+    </div>
+
+    <!-- Navigation bar -->
+    <mat-toolbar class="nav">
+        <mat-toolbar-row>
+            <a class="link" mat-button [routerLink]="'/'" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"> get reading </a>
+            <a class=" link " mat-button [routerLink]=" '/view-cards' " routerLinkActive="active "> view cards </a>
+
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>

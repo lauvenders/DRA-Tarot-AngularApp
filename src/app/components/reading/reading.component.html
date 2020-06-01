@@ -1,0 +1,34 @@
+<div class="top"></div>
+<div id="selected-cards" class="center">
+    <table>
+        <tr>
+            <th>past</th>
+            <th>present</th>
+            <th>future</th>
+        </tr>
+        <tr>
+            <!-- Cards' images -->
+            <td><img id="past" src="./assets/back-tarot-card.jpg" (click)="getRandomCard('past')"></td>
+            <td><img id="present" src="./assets/back-tarot-card.jpg" (click)="getRandomCard('present')"></td>
+            <td><img id="future" src="./assets/back-tarot-card.jpg" (click)="getRandomCard('future')"></td>
+        </tr>
+        <tr>
+            <!-- Cards' names -->
+            <td class="name" id="past-name"></td>
+            <td class="name" id="present-name"></td>
+            <td class="name" id="future-name"></td>
+        </tr>
+        <tr>
+            <!-- Cards' meanings -->
+            <td id="past-meaning"></td>
+            <td id="present-meaning"></td>
+            <td id="future-meaning"></td>
+        </tr>
+    </table>
+
+</div>
+
+<!-- Back button -->
+<div class="bottom">
+    <button [routerLink]="'/'">Back</button>
+</div>
